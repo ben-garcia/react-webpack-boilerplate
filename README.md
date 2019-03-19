@@ -1,2 +1,32 @@
 # react-webpack-boilerplate
-react using webpack 4
+
+> Use webpack for react development.
+
+### Table Of Contents
+
+[Project Structure](#project-structure)
+
+[Installation](#installation)
+
+### Project Structure
+
+```
+build/
+src/
+|- index.js
+|- App.js
+```
+
+### Installation
+
+1. clone the repository
+
+   `git@github.com:ben-garcia/react-webpack-boilerplate.git`
+
+2. `yarn` or `npm install` to install npm packages
+
+3. `yarn start` or `npm start` to start dev server on `localhost:8080`
+
+```
+
+```
