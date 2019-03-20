@@ -22,7 +22,7 @@ src/
 
 1. clone the repository
 
-   `git@github.com:ben-garcia/react-webpack-boilerplate.git`
+   `git clone git@github.com:ben-garcia/react-webpack-boilerplate.git`
 
 2. `yarn` or `npm install` to install npm packages
 
