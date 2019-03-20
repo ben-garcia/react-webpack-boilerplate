@@ -13,8 +13,9 @@
 ```
 build/
 src/
-|- index.js
 |- App.js
+|- App.scss
+|- index.js
 ```
 
 ### Installation
