@@ -13,6 +13,7 @@ module.exports = {
     path: path.resolve(__dirname, 'build')
   },
   optimization: {
+    // minimize js and css
     minimizer: [new UgilifyJsPlugin({}), new OptimizeCSSAssetsPlugin({})]
   },
   module: {
@@ -26,18 +27,23 @@ module.exports = {
       {
         test: /\.(sa|sc)ss$/,
         include: path.resolve(__dirname, 'src'),
+        // order is important
+        // does from right to left.
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
       },
       {
         test: /\.html$/,
+        // use 'html-loader' to minimize the html output
         use: [{ loader: 'html-loader', options: { minimize: true } }]
       }
     ]
   },
   plugins: [
+    // creates html file to inject css and js.
     new HtmlWebpackPlugin({
       template: './public/index.html'
     }),
+    // extracts css into seperate files.
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
