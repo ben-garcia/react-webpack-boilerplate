@@ -1,2 +1,6 @@
+# npm packages
 node_modules
+# output when building for production
 /build
+# yarn errors
+yarn-error.log
