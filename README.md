@@ -11,7 +11,6 @@
 ### Project Structure
 
 ```
-build/
 src/
 |- App.js
 |- App.scss
@@ -28,6 +27,6 @@ src/
 
 3. `yarn start` or `npm start` to start dev server on `localhost:8080`
 
-```
+4. work on your app.
 
-```
+5. `yarn build` or `npm build` to build files for production(inside a `build` directory).
