@@ -19,7 +19,7 @@ module.exports = merge(common, {
         // 'css-loader' is used to replace '@import' and 'url()'
         // to import/require().
         // 'sass-loader' compiles sass/scss into css
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
       },
     ],
   },

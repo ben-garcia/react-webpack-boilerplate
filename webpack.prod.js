@@ -30,7 +30,18 @@ module.exports = merge(common, {
         include: path.resolve(__dirname, 'src'),
         // order is important
         // does from right to left.
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        use: [
+          MiniCssExtractPlugin.loader,
+          // loaders are executed from right to left.
+          // 'style-loader' is used to inject style tag into the DOM.
+          // 'css-loader' is used to replace '@import' and 'url()'
+          // to import/require().
+          // 'post-loader' is used to add vendor prefixes
+          // 'sass-loader' compiles sass/scss into css
+          'css-loader',
+          'postcss-loader',
+          'sass-loader',
+        ],
       },
       {
         test: /\.html$/,
